@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %} 
+Proposal Managing 
+{% endblock title %}
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+<link href="{% static 'css/proposal-manage.css'%}" rel="stylesheet"> {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/proposals">Back</a></li>
+{% endblock links %}
+
+{% block content %}
+<section id="proposal-manage">
+    <div class="container">
+        <div class="row justify-content-end title">
+            <div class="col-12 col-md-4">
+                <h2>My proposals</h2>
+            </div>
+            <div class="col-12 col-md-4">
+                <a href="{% url 'proposal-create' %}" class="btn-apply">Submit proposal</a>
+            </div>
+        </div>
+        {% if active_proposal %}
+        <div class="jumbotron">
+        <h4>Currently active proposal (everybody can see it):</h4>
+        <ul id="proposals-list" class="">
+            <li>
+                <a data-toggle="collapse" class="collapsed border-top border-dark" href="#proposal{{active_proposal.pk}}">{{active_proposal.title}}<i class="ion-android-remove"></i></a>
+                <div id="proposal{{active_proposal.pk}}" class="collapse" data-parent="#proposals-list">
+                    <p>
+                        {{ active_proposal.description }}
+                    </p>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <a href="{% url 'proposal-switch' active_proposal.pk %}" class="btn-apply">Deactivate</a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a href="{% url 'proposal-applicants' active_proposal.pk %}" class="btn-apply">See Applicants</a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a href="{% url 'proposal-delete' active_proposal.pk %}" class="btn-apply">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+        {% else %}
+        <h4>It seems that you don't have any active proposals. Why don't you submit one?</h4>
+        {% endif %}
+        {% if unactive_proposals %}
+        <div class="jumbotron">
+        <h4>Currently unactive proposals</h4>
+        <ul id="proposals-list" class="">
+            {% for proposal in unactive_proposals %}
+            <li>
+                <a data-toggle="collapse" class="collapsed border-top border-dark" href="#proposal{{proposal.pk}}">{{proposal.title}}<i class="ion-android-remove"></i></a>
+                <div id="proposal{{proposal.pk}}" class="collapse" data-parent="#proposals-list">
+                    <p>
+                        {{ proposal.description }}
+                    </p>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <a href="{% url 'proposal-switch' proposal.pk %}" class="btn-apply">Activate</a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a href="{% url 'proposal-applicants' proposal.pk %}" class="btn-apply">See Applicants</a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a href="{% url 'proposal-delete' proposal.pk %}" class="btn-apply">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        </div>
+    </div>
+</section>
+<!-- #proposals -->
+{% endblock content %}
+
+{% block footer_javascript_section %}
+{% endblock footer_javascript_section %}

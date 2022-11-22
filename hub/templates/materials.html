@@ -1,0 +1,157 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %}
+Materials
+{% endblock title %} 
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+    <link href="{% static 'css/materials.css'%}" rel="stylesheet"> 
+    {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/">Hub</a></li>
+    <li><a href="/hub/proposals">Proposals</a></li>
+    <li><a href="/hub/opportunities">Opportunities</a></li>
+{% endblock links %}
+
+{% block content %}
+	<section id="materials">
+        <div class="container h-flex">
+            <div class="row text-center intro-info intro-row">
+                <div class="col-md-12 intro-info order-md-first order-last">
+                    {% if workshops or featured_works or courses %}
+                    <h2>Materials</h2>
+                    <h4> Click on the title to download the attached file or open the link </h4>
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headerOne">
+                            {% if workshops %}
+                                <h3> 
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Workshops
+                                    </button> 
+                                </h3>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row intro-row">
+                                        {% for workshop in workshops %}
+                                        <div class="col-md-12 col-lg-4 wow" data-wow-duration="1.4s">
+                                            <div class="box">
+                                                <div class="icon" style="background: #fceef3;"><i class="ion-ios-speedometer-outline"
+                                                        style="color: #ff689b;"></i></div>
+                                                <h4 class="title">
+                                                {% if workshop.attachment %}
+                                                <a href="{{ workshop.attachment.url }}">
+                                                {% else  %}
+                                                <a href="{{ workshop.link }}"
+                                                {% endif %}
+                                                {{ workshop.title }}</a></h4>
+                                                <p class="description">{{ workshop.description }} </p>
+                                                {% if workshop.attachment and workshop.link %}
+                                                    <a class="btn btn-link" href='{{ workshop.link }}'>View link</a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                        {% endif %}
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headerTwo">
+                            {% if featured_works %}
+                                <h3> 
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    Featured Works
+                                    </button> 
+                                </h3>
+                            </div>
+                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row intro-row">
+                                        {% for featured_work in featured_works %}
+                                        <div class="col-md-12 col-lg-4 wow" data-wow-duration="1.4s">
+                                            <div class="box">
+                                                <div class="icon" style="background: #fceef3;"><i class="ion-ios-speedometer-outline"
+                                                        style="color: #ff689b;"></i></div>
+                                                <h4 class="title">
+                                                {% if featured_work.attachment %}
+                                                <a href="{{ featured_work.attachment.url }}">
+                                                {% else  %}
+                                                <a href="{{ featured_work.link }}">
+                                                {% endif %}
+                                                {{ featured_work.title }}</a></h4>
+                                                <p class="description">{{ featured_work.description }} </p>
+                                                {% if featured_work.attachment and featured_work.link %}
+                                                    <a class="btn btn-link" href='{{ featured_work.link }}'>View link</a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                        {% endif %}
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headerThree">
+                            {% if courses %}
+                                <h3> 
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    Courses
+                                    </button> 
+                                </h3>
+                            </div>
+                            <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row intro-row">
+                                        {% for course in courses %}
+                                        <div class="col-md-12 col-lg-4 wow" data-wow-duration="1.4s">
+                                            <div class="box">
+                                                <div class="icon" style="background: #fceef3;"><i class="ion-ios-speedometer-outline"
+                                                        style="color: #ff689b;"></i></div>
+                                                <h4 class="title">
+                                                {% if course.attachment %}
+                                                <a href="{{ course.attachment.url }}">
+                                                {% else  %}
+                                                <a href="{{ course.link }}">
+                                                {% endif %}
+                                                {{ course.title }}</a></h4>
+                                                <p class="description">{{ course.description }} </p>
+                                                {% if course.attachment and course.link %}
+                                                    <a class="btn btn-link" href='{{ course.link }}'>View link</a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                        {% endif %}
+                        </div>
+                    </div>
+                    {% else %}
+                    <h3> Keep tuned for Materials very soon </h3>
+                        <div class="text-center">
+                        <a href="{% url 'hub' %}" class="btn-apply justify-self-center">Go back</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+	</section><!-- #materials -->
+{% endblock content %}
+
+{% block footer_javascript_section %}
+{% endblock footer_javascript_section %}

@@ -1,0 +1,5 @@
+dope green: #9CF7DF
+darker green: #008080
+background black: #041918
+mild violet: rgb(189, 146, 187)
+high protein: lightsalmon

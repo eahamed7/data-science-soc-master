@@ -1,0 +1,199 @@
+{# HTML5 declaration #}
+<!DOCTYPE html>
+{% load static %}
+<html>
+    {# Make modifiable head elements #}
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158919728-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158919728-2');
+        </script>
+
+        <title>{% block title %} Change me {% endblock title %} | UCLDSS</title>
+        {% block head_favicon %}
+	        <link href="{% static 'img/favicon.png' %}" rel="icon">
+        {% endblock head_favicon %}
+        {% block head_meta %}
+            {% block head_meta_charset %}
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=utf-8" />
+            {% endblock head_meta_charset %}
+            {% block head_meta_contentlanguage %}
+                <meta http-equiv="Content-Language" value="en-US" />
+            {% endblock head_meta_contentlanguage %}
+            {% block head_meta_viewport %}
+                <meta name="viewport"
+                      content="width=device-width, initial-scale=1.0">
+            {% endblock head_meta_viewport %}
+        {% endblock head_meta %}
+        {% block google_fonts %}
+        	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700"
+		rel="stylesheet">
+        {% endblock google_fonts %}
+        {% block head_css %}
+            {% block head_css_site %}
+            	<!-- Bootstrap CSS File -->
+                <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}"
+                      rel="stylesheet">
+
+                <!-- Libraries CSS Files -->
+                <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" 
+                    rel="stylesheet">
+	            <link href="{% static 'lib/animate/animate.min.css' %}"
+                    rel="stylesheet">
+	            <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" 
+                    rel="stylesheet">
+                <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" 
+                    rel="stylesheet">
+                <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" 
+                    rel="stylesheet">
+                    
+                <!-- Main Stylesheet File -->
+                <link href="{% static 'css/site.css' %}" 
+                    rel="stylesheet">
+            {% endblock head_css_site %}
+            {% block head_css_section %}{% endblock head_css_section %}
+            {% block head_css_page %}{% endblock head_css_page %}
+        {% endblock head_css %}
+    </head>
+    <body>
+        {# Navigation Menu #}
+        <header id="header">
+            <div id="topbar">
+                <div class="container">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ucldata" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/ucldata/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/ucl.datasci/" class="instagram"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="logo float-left">
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <h1 >
+                        <a class="text-light" href="/" class="scrollto">
+                            UCL Data Science 
+                        </a> 
+                        <span> {% block logo_extension %} {% endblock logo_extension %} 
+                        </span>
+                    </h1>
+                    <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+                </div>
+                <nav class="main-nav float-right d-none d-lg-block">
+                    
+                    <ul>
+                        <li class="active"><a href="/">Home</a></li>
+                        {% block links %}
+                        {% endblock links %}
+                        {% if user.is_authenticated %}
+                        <li><a><span> Hi {{ user.first_name }}! </span></a></li>
+                        <li><a href="{% url 'logout' %}">logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'signup' %}">Sign up</a></li>
+                        {% endif %}
+                    </ul>
+                </nav><!-- .main-nav -->
+            </div>
+        </header><!-- #header -->
+        {# The Document Body #}
+        <div id="site-wrapper"> 
+            {% block content %}
+	        <section id="intro">
+            <div class="container d-flex h-100">
+                <div class="row justify-content-center mx-auto intro-row">
+                    <div class="col-md-10 intro-info order-md-first order-last">
+                        <h2>You have no content</h2>
+                    </div>
+            </div>
+	        </section><!-- #intro -->
+            {% endblock content %}
+        </div>
+        {# The Footer #}
+        <footer id="footer" class="section-bg">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="footer-info">
+                                        <h3>UCL Data Science Society</h3>
+                                        <p>Part of UCL Guild. Founded in 2017.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="footer-links">
+                                        <h4>Useful Links</h4>
+                                        <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="https://www.ucl-guild.com/">Guild</a></li>
+                                            <li><a href="{% url 'home:terms_and_conditions' %}">Terms and Conditions</a></li>
+                                            <li><a href="{% url 'home:privacy_notice' %}">Privacy Notice</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-links">
+                                        <h4>Contact Us</h4>
+                                        <p>
+                                            University College London<br>
+                                            Gower Street<br>
+                                            London WC1E 6BT<br>
+                                            United Kingdom<br>
+                                            <strong>Email:</strong> su-datascience@ucl.ac.uk<br>
+                                        </p>
+                                    </div>
+                                    <div class="social-links">
+                                        <a href="https://www.facebook.com/ucldata" class="facebook"><i class="fa fa-facebook"></i></a>
+                                        <a href="https://www.linkedin.com/company/ucldata/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                                        <a href="https://www.instagram.com/ucl.datasci/" class="instagram"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong>UCL Data Science Society</strong>. All Rights Reserved
+                </div>
+            </div>
+        </footer><!-- #footer -->
+    </body>
+    {# Set of blocks that can be used to display JavaScript files #}
+    {% block footer_javascript %}
+        {% block footer_javascript_site %}
+
+            <!-- JavaScript Libraries -->
+            <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+            <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+            <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+            <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+            <script src="{% static 'lib/mobile-nav/mobile-nav.js' %}"></script>
+            <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+            <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+            <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+            <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+            <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+            <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+
+            <!-- Contact Form JavaScript File -->
+            <script src="{% static 'contactform/contactform.js' %}"></script>
+
+            <!-- Template Main Javascript File -->
+            <script src="{% static 'js/main.js' %}"></script>
+
+        {% endblock footer_javascript_site %}
+        {% block footer_javascript_section %}{% endblock footer_javascript_section %}
+        {% block footer_javascript_page %}{% endblock footer_javascript_page %}
+    {% endblock footer_javascript %}
+</html>

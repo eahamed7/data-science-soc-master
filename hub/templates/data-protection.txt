@@ -1,0 +1,47 @@
+what data is being collected?
+- User:
+    - First name
+    - Last name
+    - Email
+    - Gender
+    - Course
+    - Year 
+    - CV
+    - Aggregate Consent
+- Proposals:
+    - They can submit their own idea and apply to 
+    other proposals submitted by other students.
+    
+- Opportunities:
+    - This includes not only registering their interest
+    but also their answers to the questions of the
+    opportunity if applicable.
+
+how it’s being used?
+    - Personal access to user information WILL NOT
+    be available to the committee. Only aggregated 
+    information will be available for the purposes of 
+    gathering insights of our member base to improve 
+    offerings to members and provide statistics to sponsors.
+    - When they apply to an opportunity their
+    application gets stored for the purposes of
+    profile and application review.
+    - When they apply to a proposal they share 
+    their email with the person that created it
+    for the purpose of direct communication.
+
+how long it will be kept?
+    - Information on the user and his or her application(s)
+    will be kept until they choose to revoke consent
+    by clicking the 'Remove profile' button in the modify
+    profile option in the main page.
+
+whether it will be shared with any third parties?
+    - Aggregated anonymized information 
+    (which you can opt out from)
+    will be shared with potential sponsors.
+    - For the purposes of recruitment, your 
+    stored user details will be shared with Sponsors
+    
+
+

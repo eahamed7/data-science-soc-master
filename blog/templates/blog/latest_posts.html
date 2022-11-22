@@ -1,0 +1,120 @@
+{% extends 'base.html' %} 
+
+
+{% load static %} 
+{% load bootstrap4 %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load wagtailroutablepage_tags %}
+{% block title %}
+Posts
+{% endblock title %} 
+
+{% block body_class %}template-blogindexpage{% endblock %}
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+     <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'css/all.min.css'%}" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/clean-blog.min.css'%}" rel="stylesheet">
+  <link href="{% static 'css/scroll.css'%}" rel="stylesheet">
+    {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/">Hub</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/hub/materials">Materials</a></li>
+    <li><a href="/hub/proposals">Proposals</a></li>
+    <li><a href="/hub/opportunities">Opportunities</a></li>
+{% endblock links %}
+
+{% block content %}
+{% image self.banner_image width-1500 as banner %}
+        <!-- Page Header -->
+    <header class="masthead animated fadeIn delay-2s" style="background-image: url('{{ banner.url }}')">
+        <div class="overlay"></div>
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading animated fadeInDown delay-2s">
+                <h1>{{ page.title }}</h1>
+                <span class="subheading">{{ page.intro|richtext }}</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    
+    <div class="container">
+        <div class="d-flex btn-group animated fadeIn slower" role="group" aria-label="Post Categories">
+                <a type="button" href="{% pageurl blog_index %}" class="btn flex-fill btn-outline-light text-dark" onclick="scrollPos()">All</a>
+            {% for cat in categories %}
+                <a type="button" href="{% routablepageurl page "category_view" cat.slug %}" class="btn flex-fill btn-outline-light text-dark" onclick="scrollPos()" >{{ cat.name }}</a>
+            {% if not forloop.last %} 
+                {% endif %}
+            {% endfor %}
+          </div> 
+          <hr/ class="w-100">
+    
+        <div class="row col-md-12 mx-auto globe">
+            {% for post in posts %}
+                {% image post.specific.blog_image fill-820x400 as blog_img %}
+                {% image post.specific.author.image fill-50x50 as author_img %}
+                <div class="col-sm-4">
+                    <div class="post-preview animated fadeInUp">
+                        
+                        <a href="{{ post.url }}">
+                            <h4 class="post-subtitle">
+                                {% with categories=post.specific.categories.all %}
+                                    {% if categories %}
+                                        {% for category in categories %}
+                                            {{ category.name}}
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endwith %}
+                            </h4>
+                            <h2 class="post-title">
+                            {{ post.title }}
+                            </h2>
+                        </a>
+                            <p class="post-meta">
+                                <img class="align-self-center mr-1 mb-1 rounded-circle show-on-scroll" src="{{ author_img.url }}" alt="WriterImage" width="35px">
+                                Posted by<a href="{{ post.specific.author.website }} "> {{ post.specific.author.name }}</a> 
+                                <br>{{ post.specific.date }} | {{ post.specific.readtime }}
+                            </p>    
+                    </div>
+                </div>
+                <div class="col-sm-8"> 
+                    <a href="{{ post.url }}">
+                        <img class="inline-photo show-on-scroll" src="{{ blog_img.url }}" alt="blog_img" width="820" height="400">
+                    </a>
+                </div>
+            {% endfor %}
+            <!-- Pager -->
+            <!-- <div class="col text-center">
+            <a class="mt-5 btn btn-primary mx-auto" href="#">Show More &rarr;</a>
+            </div> -->
+        </div>
+    </div>
+
+    <hr>
+
+
+    
+{%endblock content %}
+{% block footer_javascript_section %}
+<script src="/static/javascripts/show-on-scroll.js"></script>
+<script src="/static/javascripts/scroll-pos.js"></script>
+{% endblock footer_javascript_section %}

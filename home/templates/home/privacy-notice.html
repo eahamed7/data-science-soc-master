@@ -1,0 +1,148 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %} 
+Privacy Notice
+{% endblock title %} 
+
+{% block head_css_section %}
+<link href="{% static 'css/privacy-notice.css'%}" rel="stylesheet"> 
+{% endblock head_css_section%}
+
+{% block links %}
+{% endblock links %}
+
+{% block content %}
+<div id="site-wrapper">
+        <section id="intro" class="clearfix">
+            <div class="container d-flex h-100">
+                <div class="row justify-content-center mx-auto align-self-center intro-row">
+                    <div class="col-md-8 intro-info order-first">
+                        <h2>Privacy Notice</h2>
+                    </div>
+                    <div class="col-md-8">
+                        <p>The UCL DSS cares about your privacy and the integrity of your data. That is why we want to be transparent and ensure that individuals who sign up on the Data Hub are aware of the way the personal data they submit is handled. </p>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>What data are you collecting from me?</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <p>We only collect the data that you agree to provide us upon signing up. This includes your:</p>
+                        <ul>
+                            <li>Personal Profile Information</li>
+                            <li>First name</li>
+                            <li>Last name</li>
+                            <li>Email address </li>
+                            <li>Gender (Male, Female, or Prefer not to say)</li>
+                            <li>Degree name</li>
+                            <li>Type of degree</li>
+                            <li>Year of Study</li>
+                            <li>Curriculum Vitae </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Contextual Information on your Interactions in the Hub</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <ul>General
+                                <ul>
+                                    <li>Date and time of login instances</li>
+                                </ul>
+                            Opportunities
+                                <ul>
+                                    <li>Whether you have applied for an open opportunity</li>
+                                    <li>The date of your application</li>
+                                    <li>The answers you have provided to questions, if any, required for applying to that opportunity</li>
+                                </ul>
+                            Materials
+                                <ul>
+                                    <li>Your anonymized interaction with a given item in the ‘Materials’ section (aggregated across the platform)</li>
+                                </ul>
+                            Proposals
+                                <ul>
+                                    <li>Whether you created a proposal</li>
+                                    <li>The date of creation</li>
+                                    <li>Whether you have registered your interest in an open proposal</li>
+                                <ul>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Why are you collecting this data?</h3>
+                    </div>
+                    <div class="col-md-8">
+                    <p>
+                    The objective of the UCL DSS is to foster and grow the community of data science enthusiasts at UCL. The Data Hub has been designed with the aim of helping its members by providing you with career opportunities, spaces to develop your skills and share your work, and a platform to connect with each other.
+
+                    <br><br>Specifically, we collect this data to:
+                    </p>
+                    <ul>
+                        <li>To provide you with opportunities for career advancement, including things such as, but not limited to, networking opportunities, competitions hosted by companies, insight days, and company workshops.</li>
+
+                        <li>To provide sponsors involved in the initiatives laid out in the ‘Opportunities’ section with insights on applicants to that opportunity.</li>
+
+                        <li>To provide you with potential fast-track opportunities in applications to open positions with these sponsors, including but not limited to, fast-tracking online tests, getting advice from mentors, and others. </li>
+
+                        <li>To better understand our base of followers, and develop future events, initiatives, content, and functionalities that more closely suit their profile and preferences.</li>
+
+                        <li>To facilitate connections between members wishing to collaborate on, learn more about, or discuss data science-related projects.</li>
+                    </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>How are you using this data?</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <p>To achieve the purposes outlined above, we use your data by:</p>
+                        <ul>
+                            Opportunities
+                                <ul>
+                                    <li>Providing aggregate anonymized statistics of applicants to specific Opportunities to the sponsor organizations sponsor organizations hosting or otherwise participating in these Opportunities. </li>
+                                    <li>Providing personal information such as name, email, and CV of applicants to specific Opportunities to recruiters from sponsor organizations hosting or otherwise participating in these Opportunities.</li>
+                                </ul>
+                            Materials
+                                <ul>
+                                    <li>Collecting and computing aggregate anonymized statistics of our members’ interest in the content uploaded</li>
+                                </ul>
+                            Proposals
+                                <ul>
+                                    <li>Tracking the title and description of the proposals you have created, if any.</li>
+                                    <li>Tracking the first name and email of those members which have registered their interest for a proposal, if any.</li>
+                                    <li>Facilitating the first name and email of those members which have registered their interest for a proposal, if any, with the proposal’s author to facilitate future communication.</li>
+                                    <li>Facilitating the first name and email of the proposal’s author with those members interested in a proposal, to facilitate future communication.</li>
+                                <ul>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>What is the UCL DSS’s lawful basis for processing my personal data?</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <p>
+                        The lawful basis for the UCL DSS to be processing your personal data is explicit consent. When signing up to the Data Hub, we explicitly ask that you consent to:
+                        <ul>
+                            <li>The UCL DSS gathering your personal data, laid out in section “What data are you collecting from me?”</li>
+                            <li>The UCL DSS using it for the purposes stated in the section “Why are you collecting this data?”. </li>
+                        </ul>
+                        <p>You are welcome to withdraw your consent at any time by deleting your Data Hub profile.</p>
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>What are my GDPR data subject rights?</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <p>The UCL DSS places emphasis on transparency. That is why we want you to be aware of your rights: </p>
+                        <ol>
+                            <li><b>Right to be informed</b>: The UCL DSS must tell individuals what data is being collected, how it’s being used, how long it will be kept and whether it will be shared with any third parties. </li>
+                            <li><b>Right of access</b>: Individuals have the right to request a copy of the information that the UCL DSS holds on them.</li>
+                            <li><b>Right of rectification</b>: Individuals have the right to correct data that is inaccurate or incomplete.</li>
+                            <li><b>Right to be forgotten</b>: Individuals can ask for the data the UCL DSS holds on them to be erased from our records.</li>
+                            <li><b>Right of portability</b>: Individuals can request that the UCL DSS transfer any data that it holds on them to another company.</li>
+                            <li><b>Right to restrict processing</b>: Individuals can request that the UCL DSS limits the way it uses personal data.</li>
+                            <li><b>Right to object</b>: Individuals have the right to challenge certain types of processing, such as direct marketing.</li>
+                            <li><b>Right related to automated decision-making including profiling</b>: Individuals are free to request a review of automated processing if they believe the rules aren’t being followed.</li>
+                        </ol>
+                        <p>You are free to exercise your rights by contacting the UCL DSS at guilddatasci@gmail.com </p>
+                </div>
+            </div>
+        </section>
+<div class="border"></div>
+{% endblock content %}

@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------
+# Introduction Section
+--------------------------------------------------------------*/
+
+#intro {
+    /* NOTE: Overrides the CSS styling in 'site.css' */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url('../img/backgrounds/web dark 1.png');
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#intro h2 {
+    padding-top: 120px;
+}
+
+#intro p {
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+#intro h3 {
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+#intro li {
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+#intro ul {
+    font-size: 16px;
+    color: whitesmoke;
+}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %} 
+
+
+{% load static %} 
+{% load bootstrap4 %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load wagtailroutablepage_tags %}
+{% block title %}
+Posts
+{% endblock title %} 
+
+{% block body_class %}template-blogindexpage{% endblock %}
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+     <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'css/all.min.css'%}" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/clean-blog.min.css'%}" rel="stylesheet">
+  <link href="{% static 'css/scroll.css'%}" rel="stylesheet">
+    {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/">Hub</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/hub/materials">Materials</a></li>
+    <li><a href="/hub/proposals">Proposals</a></li>
+    <li><a href="/hub/opportunities">Opportunities</a></li>
+{% endblock links %}
+
+{% block content %}
+{% image self.home_image width-1500 as home_img %}
+<section id="intro" class="clearfix">
+    <div class="container d-flex h-100" style="background-image: url('/static/img/home_page.jpg')">
+        <div class="row justify-content-center mx-auto align-self-center intro-row">
+            <div class="col-md-6 intro-info order-md-first order-last">
+                <h2><span>Scale</span> to<br>new heights</h2>
+                <div>
+                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-6 intro-img order-md-last order-first">
+                <img src="/static/img/logo-old.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,150 @@
+    /* proposal-manage Section
+--------------------------------*/
+    
+    #proposal-manage {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: #041918 center top no-repeat;
+        background-size: cover;
+        padding: 90px 0;
+        overflow: hidden;
+    }
+    
+    #proposal-manage .title {
+        align-items: center;
+        margin: 40px 20px;
+        text-align: center
+    }
+    
+    #proposal-manage h2 {
+        color: whitesmoke;
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    #proposal-manage h4 {
+        color: grey;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        font-family: "Helvetica Neue", sans-serif;
+    }
+    
+    #proposal-manage title {
+        margin-top: 100px;
+    }
+    
+    #proposal-manage a,
+    p {
+        font-family: "Helvetica Neue", sans-serif;
+        color: black;
+        text-align: left;
+        font-size: 20px;
+        transition-delay: 0.3s ease-in-out;
+        margin-bottom: 0;
+        margin: 10px 0;
+    }
+    
+    #proposal-manage h2 span {
+        color: #9CF7DF;
+    }
+    
+    #proposal-manage button {
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 10px 32px;
+        border-radius: 4px;
+        transition: 0.5s;
+        color: #fff;
+        background: whitesmoke;
+        color: #041918;
+    }
+    
+    #proposal-manage button:hover {
+        background: #9CF7DF;
+    }
+    
+    #proposal-manage li {
+        color: whitesmoke;
+    }
+    
+    #proposal-manage header .logo h1 span {
+        color: #9CF7DF;
+    }
+    
+    #proposal-manage #proposals-list {
+        padding: 0;
+        list-style: none;
+    }
+    
+    #proposal-manage #proposals-list li {
+        border-bottom: 1px solid #ebebeb;
+    }
+    
+    #proposal-manage #proposals-list i {
+        font-size: 24px;
+        position: absolute;
+        right: 0;
+        top: 20px;
+    }
+    
+    #proposal-manage #proposals-list p {
+        margin-bottom: 20px;
+    }
+    
+    #proposal-manage #proposals-list a.collapsed {
+        color: black
+    }
+    
+    #proposal-manage #proposals-list a.collapsed:hover {
+        color: rgb(43, 115, 219);
+        transition: 0.3s;
+    }
+    
+    #proposal-manage #proposals-list a.collapsed i::before {
+        content: "\f2c7" !important;
+    }
+    
+    #proposal-manage .btn-apply {
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 10px 30px;
+        border-radius: 4px;
+        transition: 0.5s;
+        color: #fff;
+        background: #9CF7DF;
+        color: #041918;
+        text-align: center;
+    }
+    
+    #proposal-manage .btn-apply:hover {
+        background: #0a98c0;
+        color: #fff;
+    }
+    
+    #proposal-manage .jumbotron {
+        padding: 32px 32px;
+    }
+    
+    #proposal-manage #proposals-list a {
+        padding: 22px 0;
+        display: block;
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 400;
+        padding-right: 20px;
+        border-top: 1px black;
+        color: rbga(43, 115, 219, 1.0);
+    }

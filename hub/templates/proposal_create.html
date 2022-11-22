@@ -1,0 +1,48 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %}
+    New Proposal
+{% endblock title %} 
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+    <link href="{% static 'css/proposal-create.css'%}" rel="stylesheet"> 
+    {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/proposals">Back</a></li>
+{% endblock links %}
+
+{% block content %}
+	<section id="proposal-create">
+        <div class="container">
+            <div class="row justify-content-center title">
+                <div class="col-md-12 intro-info order-md-first order-last">
+                    <h2>Create a new proposal</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center text-center">
+            <form method="post">{% csrf_token %}
+                {% bootstrap_form form show_label=False show_help=False %}
+                <button class="btn-apply" type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 ">
+                    <h4> Please do not upload or share any information regarding the project, initiative, or idea that you would not want to disclose with all the users of this platform. We request you reserve this information for future meetings or conversations that do not take place on this platform.</h4>
+                </div>
+            </div>
+        </div>
+
+	</section><!-- #opportunities -->
+{% endblock content %}
+
+{% block footer_javascript_section %}
+{% endblock footer_javascript_section %}

@@ -1,0 +1,169 @@
+/*--------------------------------------------------------------
+# Introduction Section
+--------------------------------------------------------------*/
+
+#intro {
+    /* NOTE: Overrides the CSS styling in 'site.css' */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url('../img/backgrounds/web dark 1.png');
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*--------------------------------------------------------------
+# Flagship Headings
+--------------------------------------------------------------*/
+
+
+/* --General-- */
+
+.flagship-canvas {
+    height: 80vh;
+    position: relative;
+    align-content: middle;
+}
+
+.flagship-intro {
+    padding-top: 25vh;
+    height: 80vh;
+    background-color: rgb(250, 250, 250);
+}
+
+.section-header>h3 {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.overview {
+    font-size: 20px !important;
+    color: #111;
+    width: 45vw;
+    text-align: center;
+    margin: auto;
+}
+
+
+/* --Descriptors Format-- */
+
+.marker {
+    position: absolute;
+    background-color: rgb(250, 250, 250, 00);
+    height: 70vh;
+    top: 0;
+    visibility: visible !important;
+    z-index: 1;
+    border: 1px 1px 1px 1px black;
+}
+
+.left {
+    left: 0;
+}
+
+.middle {
+    left: 33.25%;
+}
+
+.right {
+    right: 0;
+}
+
+.offset {
+    height: 70vh;
+    visibility: hidden;
+    z-index: 2;
+    width: 300%;
+    margin-top: 5vh;
+    margin-right: 1.5vw;
+}
+
+.offset h3,
+.offset p {
+    width: 100%;
+    text-align: left;
+}
+
+.offset h3 {
+    padding-top: 45%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.offset p {
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.color-w {
+    background-color: rgb(250, 250, 250, 0.7);
+    color: rgb(18, 18, 23, 1.0);
+}
+
+.color-b {
+    background-color: rgb(18, 18, 23, 0.7);
+    color: rgb(250, 250, 250, 1.0);
+}
+
+
+/* --Responsiveness-- */
+
+.marker:hover .offset {
+    visibility: visible;
+    transition: 0.9s;
+}
+
+.marker:hover~.flagship-intro {
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    z-index: 0;
+    transition: 0.5s;
+    opacity: 0.50;
+}
+
+
+/* --Hackathon-- */
+
+#hackathon {
+    background-color: rgb(250, 250, 250);
+}
+
+#hackathon>.flagship-intro {
+    background-color: rgb(250, 250, 250);
+    background-size: cover;
+    background-image: url(../img/flagship-trial.jpg);
+}
+
+
+/* --Conference-- */
+
+#conference {
+    background-color: rgb(18, 18, 23);
+}
+
+#conference>.flagship-intro {
+    background-color: rgb(18, 18, 23);
+    background-size: cover;
+    background-image: url(../img/flagship-trial21.jpg);
+}
+
+
+/* --General-- */
+
+.white {
+    color: rgb(255, 255, 255) !important;
+}
+
+.form-control {
+    font-size: 32px;
+}
+
+i {
+    font-size: 24px;
+}
+
+
+/*.shadow {text-shadow: 0px 4px 3px rgba(0,0,0,0.6), 0px 8px 13px rgba(0,0,0,0.4), 0px 18px 23px rgba(0,0,0,0.4);}*/

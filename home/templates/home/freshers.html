@@ -1,0 +1,50 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %} 
+Fresher's Fair
+{% endblock title %} 
+
+{% block head_css_section %}
+<link href="{% static 'css/freshers.css'%}" rel="stylesheet"> 
+{% endblock head_css_section%}
+
+{% block links %}
+{% endblock links %}
+
+{% block content %}
+<div id="site-wrapper">
+        <section id="intro" class="clearfix">
+            <div class="container d-flex h-100">
+                <div class="row justify-content-center mx-auto align-self-center intro-row">
+                    <div class="col-md-8 intro-info order-md-first order-last">
+                        <h2>Enter your email to get started in your <br>Data Science Journey</h2>
+                    </div>
+                    <div class="col-md-4 intro-img order-first">
+                        <img src="/static/img/logo-old.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-12">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% bootstrap_form form  show_label=False  %}
+                        <div class="text-center">
+                        <button class="align-self-center" type="submit">Submit</button>
+                        <button type="button" class="invisible" onclick="return myFunc1()">Submit</button>
+                        </div>
+                        <input type="button" name="go" class="invisible" value="Submit"/>
+                    </form>
+                    </div>
+                    {% for message in messages %}
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+<div class="border"></div>
+{% endblock content %}

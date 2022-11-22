@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %}
+Update Your Profile
+{% endblock title %} 
+
+{% block head_css_section %}
+    <link href="{% static 'css/profile-update.css'%}" rel="stylesheet"> 
+    {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/">Back</a></li>
+{% endblock links %}
+
+{% block content %}
+	<section id="profile-update">
+        <div class="container d-flex h-100">
+            <div class="row justify-content-center mx-auto">
+                <div class="col-md-8 text-center">
+                    <h2>Update Your Profile</h2>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% bootstrap_form form  show_label=False  %}
+                        <button class="align-self-center" type="submit">Update</button>
+                    </form>
+                    <a class="button" href="{% url 'profile-delete' %}">Delete my profile</a>
+                    <h4>WARNING: If you delete your profile you will automatically be withdrawn from all proposals and opportunities you applied to.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+{% endblock content %}
+
+{% block footer_javascript_section %}
+    {{ form.media.js }}
+{% endblock footer_javascript_section %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %}
+{{ opportunity.title }}
+{% endblock title %} 
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+    <link href="{% static 'css/opportunity-detail.css'%}" rel="stylesheet"> 
+    {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/">Hub</a></li>
+{% endblock links %}
+
+{% block content %}
+	<section id="opportunity-detail">
+        <div class="container">
+            <div class="row text-left">
+                <div class="col-md-12 intro-info order-md-first order-last">
+                    <h2> {{ opportunity.title }}</h2>
+                </div>
+            </div>
+            <div class="row text-left">
+                <div class="col-md-12 intro-info order-md-first order-last">
+                    <h3> {{ opportunity.subtitle }}</h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 intro-info order-md-first order-last">
+                <p class ="justify-content-left "> {{ opportunity.description|linebreaks }} </p>
+                </div>
+            </div>
+            <div class="row justify-content-left questions-row">
+                <div class="col-md-6 intro-info order-md-first order-last">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                </div>
+            </div>
+            <div class="row mx-auto justify-content-center">
+                <div class="col-md-12 intro-info order-md-first order-last">
+                    <a href="{% url 'opportunities' %}" class="btn-back scrollto justify-content-center">Back</a>
+                    <input href="" class="btn-get-started scrollto justify-content-center" type="submit" value="Apply">
+                    </form>
+                </div>
+            </div>
+        </div>
+	</section><!-- #opportunities -->
+{% endblock content %}
+
+{% block footer_javascript_section %}
+{% endblock footer_javascript_section %}

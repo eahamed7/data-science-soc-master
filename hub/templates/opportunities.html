@@ -1,0 +1,88 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %}
+Opportunities
+{% endblock title %} 
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+    <link href="{% static 'css/opportunities.css'%}" rel="stylesheet"> 
+    {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/">Hub</a></li>
+    <li><a href="/hub/proposals">Proposals</a></li>
+    <li><a href="/hub/materials">Materials</a></li>
+{% endblock links %}
+
+{% block content %}
+	<section id="opportunities">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% if not not_applied and not already_applied %}
+                        <h3> Keep tuned for Opportunities very soon </h3>
+                        <div class="text-center">
+                        <a href="{% url 'hub' %}" class="btn-apply justify-self-center">Go back</a>
+                        </div>
+                    {% else %}
+                        <h2>Opportunities</h2>
+                        {% if not_applied %}
+                            <h4>Select any of these opportunities to apply</h4>
+                            <div class="row justify-content-center">
+                            {% for opportunity in not_applied %}
+                                <div class="col-12 col-lg-4">
+                                    <div class="card ">
+                                        {% if opportunity.image %}
+                                        <img class="card-img-top" src="{{ opportunity.image.url }}" alt="Card image cap">
+                                        {% else %}
+                                        <img class="card-img-top" src="/static/img/default.png" alt="Card image cap">
+                                        {% endif %}
+                                        
+                                        <div class="card-body">
+                                            <h5 class = "wow card-title justify-content-left"> {{ opportunity.title }}</h5>
+                                            <p class = "card-text"> {{ opportunity.subtitle }}</p>
+                                            <a href="{% url 'opportunity-detail' opportunity.pk %}" class="stretched-link"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %} 
+                            </div>   
+                        {% else %}
+                            <h4>Check soon to view new updates</h4>
+                        {% endif %}
+                        {% if already_applied %}
+                            <h4>You've already applied for these</h4>
+                            <div class="row justify-content-center">
+                            {% for opportunity in already_applied %}
+                                <div class="col-12 col-lg-4">
+                                    <div class="card ">
+                                        {% if opportunity.image %}
+                                        <img class="card-img-top applied" src="{{ opportunity.image.url }}" alt="Card image cap">
+                                        {% else %}
+                                        <img class="card-img-top applied" src="/static/img/default.png" alt="Card image cap">
+                                        {% endif %}
+                                        <div class="card-body">
+                                            <h5 class = "wow card-title justify-content-left"> {{ opportunity.title }}</h5>
+                                            <p class = "card-text"> {{ opportunity.subtitle }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %} 
+                            </div>   
+                        {% else %}
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+	</section><!-- #opportunities -->
+{% endblock content %}
+
+{% block footer_javascript_section %}
+{% endblock footer_javascript_section %}

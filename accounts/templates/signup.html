@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %}
+Sign Up
+{% endblock title %} 
+
+{% block head_css_section %}
+    <link href="{% static 'css/signup.css'%}" rel="stylesheet"> 
+    {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+{% endblock links %}
+
+{% block content %}
+	<section id="signup">
+        <div class="fluid-container">
+            <div class="row justify-content-center mx-auto intro-row">
+                <div class="col-md-12 intro-info order-md-first order-last text-center">
+                    <h2>Sign up</h2>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% bootstrap_form form  show_label=False  %}
+                        <button class="align-self-center" type="submit">Sign up</button>
+                        </div>
+                    </form>
+                    <h4>By clicking 'Sign Up' you agree to the Terms and Condition of the Data Hub</h4>
+                </div>
+            </div>
+        </div>
+	</section><!-- #signup -->
+{% endblock content %}
+
+{% block footer_javascript_section %}
+    {{ form.media.js }}
+{% endblock footer_javascript_section %}

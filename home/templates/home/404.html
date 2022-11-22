@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %} 
+404 Error
+{% endblock title %} 
+
+{% block head_css_section %}
+<link href="{% static 'css/404.css'%}" rel="stylesheet"> 
+{% endblock head_css_section%}
+
+{% block links %}
+{% endblock links %}
+
+{% block content %}
+<div id="site-wrapper">
+        <section id="intro" class="clearfix">
+            <div class="container d-flex h-100">
+                <div class="row justify-content-center mx-auto align-self-center intro-row">
+                    <div class="col-md-8 intro-info order-md-first order-last">
+                        <h2>404 <span>Error</span></h2>
+                    </div>
+                    <div class="col-md-8 intro-info order-md-first order-last">
+                        <h2>"Impossible. Perhaps the archives are incomplete."<br><i>- Obi Wan Kenobi</i></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+<div class="border"></div>
+{% endblock content %}

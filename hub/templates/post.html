@@ -1,0 +1,98 @@
+{% extends 'base.html' %} 
+
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %}
+Posts
+{% endblock title %} 
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+     <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'css/all.min.css'%}" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/clean-blog.min.css'%}" rel="stylesheet">
+    {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/">Hub</a></li> 
+    <li><a href="/hub/materials">Materials</a></li>
+    <li><a href="/hub/proposals">Proposals</a></li>
+    <li><a href="/hub/opportunities">Opportunities</a></li>
+{% endblock links %}
+
+{% block content %}
+        <!-- Page Header -->
+    <header class="masthead" style="background-image: url('/static/img/home-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+                <h1>Data Blog</h1>
+                <span class="subheading">A Personal Space for Data Hub Members</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+          <div class="d-flex btn-group" role="group" aria-label="Post Categories">
+            <button type="button" class="btn flex-fill btn-outline-light text-dark active" aria-pressed="true">All</button>
+            <button type="button" class="btn flex-fill btn-outline-light text-dark" aria-pressed="true">Partnerships</button>
+            <button type="button" class="btn flex-fill btn-outline-light text-dark" aria-pressed="true">Events</button>
+            <button type="button" class="btn flex-fill btn-outline-light text-dark" aria-pressed="true">Technology</button>
+            <button type="button" class="btn flex-fill btn-outline-light text-dark" aria-pressed="true">Research</button>
+            <button type="button" class="btn flex-fill btn-outline-light text-dark" aria-pressed="true">Committee</button>
+            <button type="button" class="btn flex-fill btn-outline-light text-dark" aria-pressed="true">Workshops</button>
+          </div> 
+          <hr/ class="w-100">
+        <div class="row col-md-12 mx-auto globe">
+            {% for post in post_list %}
+            <div class="col-sm-4">
+                <div class="post-preview">
+                    
+                    <a href="{% url 'post_detail' post.slug  %}">
+                        <h4 class="post-subtitle">
+                            {{ post.category }}
+                        </h4>
+                        <h2 class="post-title">
+                        {{ post.title }}
+                        </h2>
+                        <p class="post-meta">
+                            <img class="align-self-center mr-1 mb-1 rounded-circle" src="/static/img/dylan.jpg" alt="WriterImage" width="35px">
+                            Posted by<a href="#"> {{ post.author }}</a> 
+                            <br>{{ post.created_on }} | 11 minute read
+                        </p>    
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-8"> <img class="img" src="/media/{{ post.thumbnail }}" alt="Chania" width="820" height="400"> </div>
+            {% endfor %}
+            <!-- Pager -->
+            <div class="col text-center">
+            <a class="mt-5 btn btn-primary mx-auto" href="#">Show More &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+
+    
+{%endblock content %}
+{% block footer_javascript_section %}
+
+{% endblock footer_javascript_section %}

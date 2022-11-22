@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %} 
+Proposal Applicants 
+{% endblock title %}
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+<link href="{% static 'css/proposal-applicants.css'%}" rel="stylesheet"> {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/proposals/manage">Back</a></li>
+{% endblock links %}
+
+{% block content %}
+<section id="proposal-applicants">
+    <div class="container">
+        <div class="row justify-content-center title">
+            <h2> "{{ proposal.title }}" applicants </h2>
+        </div>
+        {% if applicants %}
+            {% for applicant in applicants %}
+            <ul>
+                <p>{{applicant.first_name}} {{ applicant.second_name }} - {{ applicant.email}}</p>
+            </ul>
+            {% endfor %}
+        {% else %}
+        <h4>It seems that nobody has applied to it yet<h4>
+        {% endif %}
+    </div>
+</section>
+<!-- #proposals -->
+{% endblock content %}
+
+{% block footer_javascript_section %}
+{% endblock footer_javascript_section %}

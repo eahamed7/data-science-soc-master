@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %} 
+Proposals 
+{% endblock title %}
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+<link href="{% static 'css/proposals.css'%}" rel="stylesheet"> {{ form.media.css }}
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/">Hub</a></li>
+    <li><a href="/hub/materials">Materials</a></li>
+    <li><a href="/hub/opportunities">Opportunities</a></li>
+{% endblock links %}
+
+{% block content %}
+<section id="proposals">
+    <div class="container">
+        <div class="row justify-content-end title">
+            <div class="col-12 col-md-4 order-md-first">
+                <a href="{% url 'proposal-manage'%}" class="btn-apply">Manage proposals</a>
+            </div>
+            <div class="col-12 col-md-4 order-first ">
+                <h2>Proposals</h2>
+            </div>
+            <div class="col-12 col-md-4">
+                <a href="{% url 'proposal-create' %}" class="btn-apply">Submit proposal</a>
+            </div>
+        </div>
+        {% if not_applied %}
+        <div class="jumbotron">
+        <h4>Select any of these proposals to read more about them and apply:</h4>
+        <ul id="proposals-list" class="">
+            {% for proposal in not_applied %}
+            <li>
+                <a data-toggle="collapse" class="collapsed border-top border-dark" href="#proposal{{proposal.pk}}">{{proposal.title}}<i class="ion-android-remove"></i></a>
+                <div id="proposal{{proposal.pk}}" class="collapse" data-parent="#proposals-list">
+                    <class = "card card-light">
+                    <p>
+                        {{ proposal.description }}
+                    </p>
+                    <a href="{% url 'proposal-apply' proposal.pk  %}" class="btn-apply">Apply</a>
+                    </class>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        </div>
+        {% endif %}
+        {% if already_applied %}
+        <div class="jumbotron">
+        <h4>Review the proposals you've already applied to:</h4>
+        <ul id="proposals-list" class="">
+            {% for proposal in already_applied %}
+            <li>
+                <a data-toggle="collapse" class="collapsed border-top border-dark" href="#proposal{{proposal.pk}}">{{proposal.title}}<i class="ion-android-remove"></i></a>
+                <div id="proposal{{proposal.pk}}" class="collapse" data-parent="#proposals-list">
+                    <p>
+                        {{ proposal.description }}
+                    </p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        </div>
+        {% endif %}
+    </div>
+</section>
+<!-- #proposals -->
+{% endblock content %} 
+
+{% block footer_javascript_section %}
+{% endblock footer_javascript_section %}

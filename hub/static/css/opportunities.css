@@ -1,0 +1,110 @@
+/* Opportunities Section
+--------------------------------*/
+
+#opportunities {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #041918 center top no-repeat;
+    background-size: cover;
+}
+
+#opportunities .intro-row {
+    align-items: center;
+}
+
+#opportunities h2 {
+    margin-top: 20vh;
+    color: whitesmoke;
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#opportunities h3 {
+    margin-top: 40vh;
+    color: whitesmoke;
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#opportunities h4 {
+    color: lightgrey;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+#opportunities p {
+    font-family: "Helvetica Neue", sans-serif;
+    color: grey;
+    text-align: left;
+    font-size: 18px;
+    transition-delay: 0.3s ease-in-out;
+    margin-bottom: 0;
+}
+
+#opportunities h2 span {
+    color: #9CF7DF;
+}
+
+#opportunities .btn-apply {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #9CF7DF;
+    color: #041918;
+    text-align: center;
+}
+
+#proposal-manage .btn-apply:hover {
+    background: #0a98c0;
+    color: #fff;
+}
+
+#opportunities button:hover {
+    background: #9CF7DF;
+}
+
+#opportunities li {
+    color: whitesmoke;
+    list-style-type: katakana;
+}
+
+#opportunities header .logo h1 span {
+    color: #9CF7DF;
+}
+
+#opportunities .card {
+    height: 380px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#opportunities .applied {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+#opportunities .card:hover {
+    transform: scale(1.10) translateZ(0);
+    transition-duration: 0.3s;
+}
+
+#opportunities .card-body {
+    background-color: rgb(245, 248, 253);
+}

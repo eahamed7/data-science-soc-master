@@ -1,0 +1,80 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load bootstrap4 %}
+
+{% block title %}
+Hub
+{% endblock title %} 
+
+{% block logo_extension %}
+{% endblock logo_extension %}
+
+{% block head_css_section %}
+    <link href="{% static 'css/hub.css'%}" rel="stylesheet"> 
+{% endblock head_css_section%}
+
+{% block links %}
+    <li><a href="/hub/opportunities">Opportunities</a></li>
+    <li><a href="/hub/materials">Materials</a></li>
+    <li><a href="/hub/proposals">Proposals</a></li>
+{% endblock links %}
+
+{% block content %}
+	<section id="hub">
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-8 col-md-10 mx-auto">
+                        <div class="site-heading">
+                            <h3 class=" site-heading my-4 mt-3 text-white"> Welcome {{ user.last_name }}. </h3>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #fceef3;"><i class="ion-ios-world-outline" style="color: #ff689b;"></i></div>
+                        <h4 class="title"><a href="{% url 'opportunities' %} ">Opportunitites</a></h4>
+                        <p class="description">Apply to different opportunities regularly added such as competitions, internships, events and many more.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+                        <h4 class="title"><a href="{% url 'materials' %}">Materials</a></h4>
+                        <p class="description">Dig into the materials for workshops, case studies and courses available and take your Data Science skills to the next level. </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #D6EAF8;"><i class="ion-ios-analytics-outline" style="color: #5DADE2;"></i></div>
+                        <h4 class="title"><a href="{% url 'proposals' %}">Proposals</a></h4>
+                        <p class="description">Join fellow members of the society in their projects or start your own and reclute peers here.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #D6EAF8;"><i class="ion-ios-contact-outline" style="color: #5DADE2;"></i></div>
+                        <h4 class="title"><a href="{% url 'profile-update' %}">Modify Profile</a></h4>
+                        <p class="description">Correct a mistake in your profile, change your email or update your CV with your latest achievements.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #D6EAF8;"><i class="ion-ios-contact-outline" style="color: #5DADE2;"></i></div>
+                        <h4 class="title"><a href="{% url 'post' %}">Blog Post</a></h4>
+                        <p class="description">Create a blog post entailing your experience in Data Science, or write about anything in general.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+{% endblock content %}
+
+{% block footer_javascript_section %}
+{% endblock footer_javascript_section %}

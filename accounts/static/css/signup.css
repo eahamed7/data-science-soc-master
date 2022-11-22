@@ -1,0 +1,76 @@
+/* Signup Section
+--------------------------------*/
+
+#signup {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #041918 center top no-repeat;
+    background-size: cover;
+}
+
+#signup .fluid-container {
+    width: 100%;
+    padding: 10px 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 800px) {
+    #signup .fluid-container {
+        width: 500px;
+    }
+}
+
+#signup .intro-row {
+    align-items: center;
+}
+
+#signup p {
+    color: whitesmoke;
+}
+
+#signup h2 {
+    margin-top: 10vh;
+    color: whitesmoke;
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+#signup h2 span {
+    color: #9CF7DF;
+}
+
+#signup h4 {
+    margin-top: 30px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#signup button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: whitesmoke;
+    color: #041918;
+}
+
+#signup button:hover {
+    background: #9CF7DF;
+}
+
+#signup a {
+    color: whitesmoke;
+}
+
+#signup .select2-container {
+    min-height: 2em !important;
+}

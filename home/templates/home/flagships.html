@@ -1,0 +1,125 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %} 
+Flaghsips
+{% endblock title %} 
+
+{% block head_css_section %}
+<link href="{% static 'css/flagships.css'%}" rel="stylesheet"> 
+{% endblock head_css_section%}
+
+{% block links %}
+{% endblock links %}
+
+{% block content %}
+<div id="site-wrapper">
+            <!--==========================
+                Intro Section
+        ============================-->
+        <section id="intro" class="clearfix">
+            <div class="container d-flex h-100">
+                <div class="row justify-content-center mx-auto align-self-center intro-row">
+                    <div class="col-md-8 intro-info order-md-first order-last">
+                        <h2><span>Explore</span> some of the flagship events we're preparing for you.</h2>
+                    </div>
+                    <div class="col-md-4 intro-img order-md-last order-first">
+                        <img src="/static/img/logo-old.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- #intro -->
+
+<!-- #border -->
+<div class="border"></div>
+
+<!--==========================
+        Flagship Pills
+============================-->
+
+<section id="hackathon" class="flagship-canvas">
+    <div class="container col-md-4 left marker">
+        <div class="container col-md-12 offset color-b">
+            <header class="section-header col-mx-4 content">
+                <h3 class="white">What?</h3>
+                <p class="overview white">
+                A one-day hackathon consisting of workshops and challenges, offering the perfect opportunity to learn, develop, and demonstrate your capacity to apply data science skills to deliver business results in front of industry experts driving innovation through AI.
+                </p>
+            </header>
+        </div>
+    </div>
+    <div class="container col-md-4 middle marker">
+        <div class="container col-md-12 offset color-b">
+            <header class="section-header col-mx-4 content">
+                <h3 class="white">Why?</h3>
+                <p class="overview white">
+                Data Science is a predatory force that is revolutionizing business models and processes across the board. Don’t know how to code? Don’t worry. Drawing on both technical and business acumen, this challenge is a unique opportunity to understand data science from both a technical and business perspective, and gain transferable skills that will help you propel your career in the world of tomorrow. 
+                </p>
+            </header>
+        </div>
+    </div>
+    <div class="container col-md-4 right marker">
+        <div class="container col-md-12 offset color-b">
+            <header class="section-header col-mx-4 content">
+                <h3 class="white">When?</h3>
+                <p class="overview white">
+                The UCL DSS Hackathon will take place over a Saturday in late October - early November 2019. For updates and further details, stay tuned to our social media (Facebook, Instagram, LinkedIn) and our Newsletter!
+                </p>
+            </header>
+        </div>
+    </div>
+    <div class="container col-md-12 flagship-intro">
+        <header class="section-header col-md-3 mx-auto">
+            <h3 class="white">UCL DSS Hackathon</h3>
+        </header>
+        <p class="overview white">
+            If you believe that AI-powered data analysis, visualization, and modeling are the future drivers of business performance and value generation, then you are one of us, and this is the event for you.<br/>Welcome to the world of tomorrow.
+        </p>
+    </div>
+</section>
+
+<!-- #border -->
+<div class="border"></div>
+
+ <section id="conference" class="flagship-canvas">
+    <div class="container col-md-4 left marker">
+        <div class="container col-md-12 offset color-w">
+            <header class="section-header col-mx-4 content">
+                <h3>What?</h3>
+                <p class="overview">
+                A one-day conference hosting a suite of top-of-the-line speakers from companies pushing the boundaries of innovation in their respective fields, as well as unique networking opportunities with recruiters from these leading organizations.
+                </p>
+            </header>
+        </div>
+    </div>
+    <div class="container col-md-4 middle marker">
+        <div class="container col-md-12 offset color-w">
+            <header class="section-header col-mx-4 content">
+                <h3>Why?</h3>
+                <p class="overview">
+                Whether you aspire to engineer neural networks yourself or lead an organization leveraging machine learning to re-write the rules of your industry, it is critical that you understand the challenges and opportunities that lie in the horizon of artificial intelligence over the next decade. With a world of uncertainties before us, this conference is the perfect opportunity to gain an understanding of the course that AI is taking and the untapped value out there that has yet to be discovered.
+                </p>
+            </header>
+        </div>
+    </div>
+    <div class="container col-md-4 right marker">
+        <div class="container col-md-12 offset color-w">
+            <header class="section-header col-mx-4 content">
+                <h3>When?</h3>
+                <p class="overview">
+                The UCL AIC will take place over a Saturday in late January - early February 2020. For updates and further details, stay tuned to our social media (Facebook, Instagram, LinkedIn) and our Newsletter!
+                </p>
+            </header>
+        </div>
+    </div>
+    <div class="container col-md-12 flagship-intro">
+        <header class="section-header col-md-3 mx-auto">
+            <h3 class="white">UCL AI Conference</h3>
+        </header>
+        <p class="overview white">
+            Despite the leapfrog pace at which machine learning research has advanced artificial intelligence capabilities throughout the past years, pundits in the subject agree that the field is still in its infancy. As AI research continues to plow forth towards a horizon of commercial opportunities, however, there lies a stormy sea of challenges that must first be navigated.
+        </p>
+    </div>
+</section>
+{% endblock content %}

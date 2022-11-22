@@ -1,0 +1,263 @@
+
+
+/*--------------------------------------------------------------
+# Introduction Section (Background)
+--------------------------------------------------------------*/
+
+#intro {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url('../img/backgrounds/web dark 1.png');
+    background-position: 100%;
+    background-size: cover;
+}
+
+
+/*--------------------------------------------------------------
+# Sponsors Section
+--------------------------------------------------------------*/
+
+/* --Format-- */
+
+#sponsors {
+    border: hidden;
+    overflow: hidden;
+    background-color: rgb(250,250,250);
+}
+
+#sponsors .jumbotron {
+    margin-top: 10vh;
+    padding: 0 0 0 0;
+}
+
+#sponsors .logos {
+    display: flex;
+    height: 60vh;
+    border-radius: 0;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+.description {
+    visibility: hidden;
+    width: 45vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: absolute;
+    top: 30%;
+    text-align: left; 
+    z-index: 2;
+    vertical-align: middle;
+}
+
+.description > p {
+    font-weight: 50%;
+    color: black;
+}
+
+/* --Responsiveness-- */
+
+.boxes:hover .logos{
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    z-index: 0;
+    transition: 0.5s;
+    opacity: 0.50;
+}
+
+.boxes:hover .description{
+    visibility: visible;
+    transition-delay: 0.4s;
+}
+
+/* --Descriptions-- */
+
+.left-side {left: 0;}
+
+.right-side {right: 0;}
+
+/* --Logos-- */
+
+#sponsors .quantum_black {
+    background: url(../img/sponsors_19/qb_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .investec {
+    background: url(../img/sponsors_19/investec_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .goldman_sachs {
+    background: url(../img/sponsors_19/goldman_sachs_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .bloomberg {
+    background: url(../img/sponsors_19/bloomberg_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .amplify_trading {
+    background: url(../img/sponsors_19/amplify_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .wiser_grads {
+    background: url(../img/sponsors_19/wiser_logo.png);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#sponsors .santander {
+    background: url(../img/sponsors_19/santander_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .morgan_stanley {
+    background: url(../img/sponsors_19/morgan_stanley_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .credit_suisse {
+    background: url(../img/sponsors_19/credit_suisse_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .kpmg {
+    background: url(../img/sponsors_19/kpmg_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .lseg {
+    background: url(../img/sponsors_19/lseg_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .pimco {
+    background: url(../img/sponsors_19/pimco_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .point_72 {
+    background: url(../img/sponsors_19/point72_logo.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .fidelity {
+    background: url(../img/sponsors_19/fidelity_logo.png);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .axiom_tutoring {
+    background: url(../img/sponsors_19/axiom_logo.png);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#sponsors .edukate {
+    background: url(../img/sponsors_19/edukate_logo.png);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+
+
+/*--------------------------------------------------------------
+# Horizonotal Lines
+--------------------------------------------------------------*/
+
+#gold hr {
+    margin-left: 0;
+    margin-top: 0;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    width: 81.5vw;
+    /* width: 3vw; */
+    height: 0;
+    border: 0;
+    border-top: 2px solid gold;
+}
+
+#silver hr {
+    margin-left: 0;
+    margin-top: 0;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    width: 81.5vw;
+    /* width: 3vw; */
+    height: 0;
+    border: 0;
+    border-top: 2px solid #c0c0c0;
+}
+
+#bronze hr {
+    margin-left: 0;
+    margin-top: 0;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    width: 81.5vw;
+    /* width: 3vw; */
+    height: 0;
+    border: 0;
+    border-top: 2px solid #cd7f32;
+}
+
+#ed-partners hr {
+    margin-left: 0;
+    margin-top: 0;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    width: 81.5vw;
+    /* width: 3vw; */
+    height: 0;
+    border: 0;
+    border-top: 2px solid purple;
+}

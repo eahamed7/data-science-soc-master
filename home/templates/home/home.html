@@ -1,0 +1,716 @@
+{% extends 'base.html' %} 
+{% load static %} {% block title %} Home {% endblock title %} {% block head_css_section %}
+<link href="{% static 'css/home.css'%}" rel="stylesheet"> {% endblock head_css_section%} {% block links %}
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab&display=swap" rel="stylesheet">  
+<li><a href="/blog/">Blog</a></li>
+<li><a href="#flagships">Flagships</a></li>
+<li><a href="#data-hub">Data Hub</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#team">Committee</a></li>
+<li><a href="#sponsors">Sponsors</a></li>
+{% endblock links %} {% block content %}
+<!--==========================
+        Intro Section
+============================-->
+<section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+        <div class="row justify-content-center mx-auto align-self-center intro-row">
+            <div class="col-md-6 intro-info order-md-first order-last">
+                <h2><span>Scale</span> to<br>new heights</h2>
+                <div>
+                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-6 intro-img order-md-last order-first">
+                <img src="/static/img/logo-old.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- #intro -->
+
+<main id="main">
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+        <!-- Beginning Image -->
+        <div class="jumbotron-fluid" style="background: rgb(1,7,6)">
+            <div class="row col-md-12 mx-auto blog wow fadeIn">
+                <div class="col-md-6 my-auto wow fadeInUp">
+                        <h1 class="display-1 blog-title">
+                            Making sense of Data Science: The Data Blog
+                            </h1>
+                        <p class="blog-description">
+                            This A-Z guide offers a series of simple, bite-sized explainers to help anyone understand what AI is, how it works and how it’s changing the world around us.
+                        </p>
+                </div>
+                <div class="col-md-6 my-auto wow pulse slower infinite ">
+                    <a href="./blog">   
+                        <img src="/static/img/data-blog.jpg" class="rounded" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron-fluid" style="background: rgb(1,7,6)">
+            <div class="row col-md-12 mx-auto globe">
+                <div class="inner-text wow fadeInUp">
+                    <h1 class="display-3 methods-globe"> welcome<wbr>Greeting<span>() {</span></h1>
+                    <h1 class="display-5 inner-code"><span>hello</span>(<span style="color: lightsalmon">your<wbr>_nerdy_<wbr>nickname</span>);</h1>
+                    <h1 class="display-5 inner-code"># Welcome to the UCL DSS!</h1>
+                    <h1 class="display-3 methods-globe"> <span>}</span></h1>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Our belief -->
+        <div class="jumbotron jumbotron-fluid wow fadeInUp" style="background: rgb(1,7,6)">
+            <div class="container col-md-12 mx-auto">
+                <div class="inner-text-belief wow fadeInUp">
+                    <h1 class="display-3 methods-globe"> our<wbr>Belief<span>() {</span></h1>
+                    <h1 class="display-5 inner-code-belief">
+                        <span style="color: lightsalmon">while</span> (world<wbr>.<span>exists</span>()) {
+                        <br><br> &emsp;&emsp;&emsp;&emsp;dataScience
+                        <wbr>.<span>will<wbr>Create<wbr>RevolutionaryThings</span>();
+                        <br> <br> &emsp;&emsp;&emsp;&emsp;dataScience
+                        <wbr>.<span>will<wbr>Change<wbr>LivesForTheBetter</span>();
+                        <br> <br> &emsp;&emsp;&emsp;&emsp;dataScience
+                        <wbr>.<span>will<wbr>PushHumanityForward</span>();
+                        <br> <br> }
+                    </h1>
+                    <h1 class="display-3 methods-globe"> <span>}</span></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Mission 1 -->
+            <div class="jumbotron jumbotron-mission container col-md-10 mx-auto wow fadeInUp">
+                <div class="row mission_text">
+                    <div class="col-md-7">
+                        <h1 class="display-5 code">var <span class="variables">mission_1</span> = <span class="methods">spread<wbr>Awareness</span>()</h1>
+                        <p class="lead">
+                            Data Science is not itself an end - it’s a means to an end. We aim to help our community understand the potential of this tool, and pass it forward.
+                        </p>
+                    </div>
+                    <div class="col-md-5 order-md-last order-first">
+                        <img src="/static/img/awareness.png" alt="" class="icon-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission 2 -->
+        <div class="container">
+            <div class="jumbotron jumbotron-mission container col-md-10 mx-auto wow fadeInUp">
+                <div class="row mission_text">
+                    <div class="col-md-7">
+                        <h1 class="display-5 code">var <span class="variables">mission_2</span> = <span class="methods">spread<wbr>Knowledge</span>()</h1>
+                        <p class="lead">The potential of this tool lies in its versatility: its limits are the wielder’s. We seek to help our community expand their limits, and be able to use Data Science to generate value.
+                        </p>
+                    </div>
+                    <div class="col-md-5 order-md-last order-first">
+                        <img src="/static/img/knowledge.png" alt="" class="icon-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Mission 3 -->
+            <div class="jumbotron jumbotron-mission-last container col-md-10 mx-auto wow fadeInUp">
+                <div class="row mission_text">
+                    <div class="col-md-7">
+                        <h1 class="display-5 code">var <span class="variables">mission_3</span> = <span class="methods">spread<wbr>Opportunity</span>()</h1>
+                        <p class="lead">To generate value, our community must become part of the larger Data Science community around the world. That’s why, through direct exposure to industry challenges and employers, we strive to embody and strengthen that link.
+                        </p>
+                    </div>
+                    <div class="col-md-5 order-md-last order-first">
+                        <img src="/static/img/opportunity.png" alt="" class="icon-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #about -->
+
+
+    <!-- #border -->
+    <div class="border"></div>
+
+
+    <!--==========================
+      Flaghsips section
+    ============================-->
+    <section id="flagships" class="limb">
+        <div class="container col-md-10">
+            <header class="section-header">
+                <div class="row">
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <h3>Flagships</h3>
+                    </div>
+                    <div class="col-12 col-md-9 col-lg-10">
+                        <a href="{% url 'home:flagships' %}" class="btn-flagships">Read more</a>
+                    </div>
+                </div>
+            </header>
+            <hr>
+
+            <div class=“jumbotron”>
+                <div class="row justify-content-center mx-auto align-self-center">
+                    <div class="container col-md-6 boxes wow fadeInUp hackathon" data-wow-delay="0.1s"></div>
+                    <div class="container col-md-6 description left-side">
+                        <h1 class="display-4"> DSS Hackathon </h1>
+                        <p class="lead">An opportunity to put your skills to the test with real-world challenges from our sponsors</p>
+                    </div>
+                    <div class="container col-md-6 boxes wow fadeInUp summit" data-wow-delay="0.4s"></div>
+                    <div class="container col-md-6 description right-side">
+                        <h1 class="display-4"> UCL AI Conference </h1>
+                        <p class="lead">A conference with top-of-the-line speakers across industry&emsp;</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center mx-auto align-self-center">
+                    <div class="container col-md-6 boxes wow fadeInUp volunteer" data-wow-delay="0.5s"></div>
+                    <div class="container col-md-6 description left-side">
+                        <h1 class="display-4">Inspire to Code</h1>
+                        <p class="lead">A series of volunteering sessions to teach code to children in local schools</p>
+                    </div>
+                    <div class="container col-md-6 boxes wow fadeInUp future" data-wow-delay="0.8s"></div>
+                    <div class="container col-md-6 description right-side">
+                        <h1 class="display-4"> More coming! </h1>
+                        <p class="lead">Stay tuned for updates!&emsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- #border -->
+    <div class="border"></div>
+
+
+    <!--==========================
+      Data Hub Section
+    ============================-->
+    <section id="data-hub" class="section-bg limb dark">
+        <div class="container">
+            <header class="section-header">
+                <div class="row">
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <h3>Data Hub</h3>
+                    </div>
+                    <div class="col-12 col-md-9 col-lg-10 align-self-center">
+                        {% if user.is_authenticated %}
+                         <a href="{% url 'hub' %}"class="btn-datahub">Enter</a> {% else %}
+                        <h4>Log in to access </h4>
+                        {% endif %}
+                    </div>
+                </div>
+            </header>
+            <hr style="border-top:1px solid #fff;">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #fceef3;"><i class="ion-ios-world-outline" style="color: #ff689b;"></i></div>
+                        <h4 class="title"><a href="">Connect</a></h4>
+                        <p class="description">We will match you with other people interested in Data Science based on your skills and objectives.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+                        <h4 class="title"><a href="">Workshops</a></h4>
+                        <p class="description">Here you will find content from our workshops so you can catch up with them or look at the next ones.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                        <h4 class="title"><a href="">Articles</a></h4>
+                        <p class="description">We will strive to provide you with the latest news on Data Science to make sure you stay ahead of the curve.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+                        <h4 class="title"><a href="">Competitions</a></h4>
+                        <p class="description">Put your skills to the test by taking part in challenging analysis of data sets and earn special prizes. </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #e1eeff;"><i class="ion-ios-analytics-outline" style="color: #2282ff;"></i></div>
+                        <h4 class="title"><a href="">Network</a></h4>
+                        <p class="description">We will boost your awareness of Data Science related opportunities, with regular updates of internship offers.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+                    <div class="box">
+                        <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
+                        <h4 class="title"><a href="">Many more</a></h4>
+                        <p class="description">You, as a member, will be able to steer the direction of the society and the portal with your feedback.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #data hub-->
+
+
+    <!-- #border -->
+    <div class="border"></div>
+
+
+    <!--==========================
+      Past events
+    ============================-->
+    <section id="events" class="limb">
+        <div class="container">
+
+            <header class="section-header">
+                <h3>Past events</h3>
+            </header>
+            <hr>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="owl-carousel testimonials-carousel wow fadeInUp">
+                        <div class="events-item">
+                            <h3>Visa</h3>
+                            <h4>The magic behind your card</h4>
+                            <p>
+                                Transactions have never been so simple: tap or swipe, and in the blink of an eye, you’re holding a bag in your hand with your desired good. Simple, right? Not quite. <br> <br> In this event, the Head of External Affairs
+                                and the Data Nerd of VISA’s Data Science Lab delve into the intricacies of payment processing that lie behind the curtains, and how data science is being used to identify security breaches in payments, optimize interconnected
+                                processes through payment data, and facilitate access to payment processing across the world.
+                            </p>
+                        </div>
+                        <div class="events-item">
+                            <h3>YOOX Net-A-Porter group</h3>
+                            <h4>Data Science & Fashion</h4>
+                            <p>
+                                It always seems to simple: we browse our perfect fashion recommendations, click to buy, and sooner than we know it, we have the latest fashion trend at our front door. But there’s a lot of math behind this magic. <br><br>                                In this event, we host the YOOX Net-a-Porter group to tell us about the role that Data Science is playing to re-define the workings of the fashion industry, and optimize the customer’s search for garments according to their
+                                historical search patterns and interests.
+                            </p>
+                        </div>
+
+                        <div class="events-item">
+                            <h3>Meet the Comm(un)ittee!</h3>
+                            <h4>Social event</h4>
+                            <p>
+                                Get a chance to talk to the committee behind the data science society! With pints on us, the event is sure to give you a chance to meet some new faces when the year starts.
+                            </p>
+                        </div>
+                        <div class="events-item">
+                            <h3>Facebook</h3>
+                            <h4>Thomas Gizbert</h4>
+                            <p>
+                                We follow the journey of Thomas Gizbert, a UCL alumni from a humanities background as he found his calling for data science and analytics. <br><br> In this speaker event, Thomas explored the changing dynamic of the data
+                                science industry, and more specifically the way in which data science is being adapted in the consulting and social media industries.
+                            </p>
+                        </div>
+
+                        <div class="events-item">
+                            <h3>BCG</h3>
+                            <h4>Data science case studies</h4>
+                            <p>
+                                Ever wondered what projects data scientists are working on a day to day basis? <br><br> William Browne, senior data scientist at the Boston Consulting Group goes through exciting data science projects such as statistical
+                                significance of e-commerce web metrics, deep learning and natural language processing, and clustering techniques used for scanning through company reports and newspapers.
+                            </p>
+                        </div>
+
+                        <div class="events-item">
+                            <h3>KPMG</h3>
+                            <h4>AI & Healthcare</h4>
+                            <p>
+                                Our finale event of the year and one of our largest events of the year touched on topics including the representation of women in the technology sector with Rebecca Pope, senior data scientist at KPMG. Rebecca talks about why diversity is needed in the
+                                technology and data science sectors and how KPMG is taking strides in female empowerment. <br><br> Rebecca then explores the various exciting projects she undertook in her academic and professional
+                                life, such as working with the NHS to use hospital categorization data and APIs to produce a ambulance routing system for stroke patients. Data science concepts such as confusion matrices, Hadoop stacks, contagious scores
+                                and Monte-Carlo distributions were discussed in relation to the healthcare and AI industry.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="container limb">
+            <div class="row counters">
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">1803</span>
+                    <p>Followers on Facebook</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">95,700</span>
+                    <p>Students reached on Facebook</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">30</span>
+                    <p>Events last year</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">1271</span>
+                    <p>Newsletter subscribers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #events -->
+
+
+    <!-- #border -->
+    <div class="border"></div>
+
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team" class="section-bg limb dark">
+        <div class="container">
+            <div class="section-header">
+                <h3>Our committee</h3>
+            </div>
+            <hr style="border-top:1px solid #fff;">
+            <div class="row justify-content-left">
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="member">
+                        <img src="/static/img/scott.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Scott Fan</h4>
+                                <span>President</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/yiheng-scott-fan-4a696915a/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="member">
+                        <img src="/static/img/spencer.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Spencer Duan</h4>
+                                <span>Vice President</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/spencer-duan-951249174/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="member">
+                        <img src="/static/img/kimberley.jpg " class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Kimberley Ademaj</h4>
+                                <span>Treasurer</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/kimberley-ademaj-b2097618a/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="member">
+                        <img src="/static/img/dylan.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Dylan Hoi</h4>
+                                <span>Web Master</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/dylan-hoi-532634131/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="member">
+                        <img src="/static/img/amanda.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Amanda Lim</h4>
+                                <span>Head of Marketing</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/amandashlim/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="member">
+                        <img src="/static/img/markus.png" class="img-fluid" alt="0.1s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Markus Keiblinger</h4>
+                                <span>Executive of Marketing</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/markus-keiblinger/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="member">
+                        <img src="/static/img/johann.jpg" class="img-fluid" alt="0.1s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Johann Ohler</h4>
+                                <span>Executive of Data Press</span>
+                                <div class="social">
+                                    <a href="http://linkedin.com/in/johann-ohler-587215122"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="member">
+                        <img src="/static/img/tony.jpg" class="img-fluid" alt="0.1s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Tony Wu</h4>
+                                <span>Director of Science</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/zhaoxuan-wu/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="member">
+                        <img src="/static/img/romain.jpg" class="img-fluid" alt="0.1s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Romain Pelletier</h4>
+                                <span>Executive of Science</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/romain-pelletier-6b0888186/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="member">
+                        <img src="/static/img/tania.jpg" class="img-fluid" alt="0.1s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Tania Turdean</h4>
+                                <span>Executive of Science</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/tania-turdean-8530aa160/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="member">
+                        <img src="/static/img/eric.jpg" class="img-fluid" alt="0.2s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Eric Lyu</h4>
+                                <span>Head of the DS Lab</span>
+                                <div class="social">
+                                    <a href=""><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="member">
+                        <img src="/static/img/kevin.jpg" class="img-fluid" alt="0.2s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Kevin Ren</h4>
+                                <span>Head of Quant</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/kevin-ren-0180ba160/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="member">
+                        <img src="/static/img/jenna.jpeg" class="img-fluid" alt="0.2s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Jenna Xu</h4>
+                                <span>Head of Sponsorship</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/jenna-xu/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="member">
+                        <img src="/static/img/vanessa.jpg" class="img-fluid" alt="0.2s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Vanessa Chan</h4>
+                                <span>Executive of Sponsorship</span>
+                                <div class="social">
+                                    <a href="http://linkedin.com/in/vanessa-chan-6403b0198"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="member">
+                        <img src="/static/img/jenny.jpg" class="img-fluid" alt="0.3s">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Jenny Zhou</h4>
+                                <span>Head of Outreach</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/jenny-z-115a67139"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="member">
+                        <img src="/static/img/manqi.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Manqi Li</h4>
+                                <span>Head of Events</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/manqi-li-499433186/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="member">
+                        <img src="/static/img/bhavya.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Bhavya Gupta</h4>
+                                <span>Executive of Events</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/bhavya-gupta-80b8b04a/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="member">
+                        <img src="/static/img/hector.jfif" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Hector Garcia Rodriguez</h4>
+                                <span>Executive of Events</span>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/hector-garcia-rodriguez/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- #team -->
+
+
+    <!-- #border -->
+    <div class="border"></div>
+
+
+    <!--==========================
+      Sponsors Section
+    ============================-->
+    <section id="sponsors" class="wow fadeInUp limb">
+        <div class="container">
+
+            <header class="section-header">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <h3>Our Sponsors</h3>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-9">
+                        <a href="{% url 'home:sponsorship' %}" class="btn-sponsors">Read more</a>
+                    </div>
+                </div>
+            </header>
+            <hr>
+            <div class="owl-carousel clients-carousel">
+                <img src="/static/img/sponsors_19/amplify_logo.png" alt="">
+                <img src="/static/img/sponsors_19/axiom_logo.png" alt="">
+                <img src="/static/img/sponsors_19/bloomberg_logo.png" alt="">
+                <img src="/static/img/sponsors_19/credit_suisse_logo.png" alt="">
+                <img src="/static/img/sponsors_19/edukate_logo.png" alt="">
+                <img src="/static/img/sponsors_19/fidelity_logo.png" alt="">
+                <img src="/static/img/sponsors_19/goldman_sachs_logo.png" alt="">
+                <img src="/static/img/sponsors_19/investec_logo.png" alt="">
+                <img src="/static/img/sponsors_19/kpmg_logo.png" alt="">
+                <img src="/static/img/sponsors_19/lseg_logo.png" alt="">
+                <img src="/static/img/sponsors_19/morgan_stanley_logo.png" alt="">
+                <img src="/static/img/sponsors_19/pimco_logo.png" alt="">
+                <img src="/static/img/sponsors_19/point72_logo.png" alt="">
+                <img src="/static/img/sponsors_19/qb_logo.png" alt="">
+                <img src="/static/img/sponsors_19/santander_logo.png" alt="">
+                <img src="/static/img/sponsors_19/wiser_logo.png" alt="">
+                <!--
+                <img src="/static/img/sponsors/accenture.png" alt="">
+                <img src="/static/img/sponsors/bloomberg.png" alt="">
+                <img src="/static/img/sponsors/morganstanley.png" alt="">
+                <img src="/static/img/sponsors/deutsche.png" alt="">
+                <img src="/static/img/sponsors/macquarie.png" alt="">
+                <img src="/static/img/sponsors/bnp.png" alt="">
+                <img src="/static/img/sponsors/investec.png" alt="">
+                <img src="/static/img/sponsors/jpm.png" alt="">
+                <img src="/static/img/sponsors/lse.png" alt="">
+                <img src="/static/img/sponsors/hsbc.png" alt="">
+                <img src="/static/img/sponsors/rothschild.png" alt="">
+                <img src="/static/img/sponsors/creditsuisse.png" alt="">
+                <img src="/static/img/sponsors/pimco.png" alt="">
+                <img src="/static/img/sponsors/point72.png" alt="">
+                <img src="/static/img/sponsors/gagago.png" alt="">
+                -->
+            </div>
+
+        </div>
+    </section>
+    <!-- #sponsors -->
+
+    {% endblock content %}
